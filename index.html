@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilikebanana</title>
+    <style>
+        body {
+            background-image: url('https://stardewvalleywiki.com/mediawiki/images/9/9e/Farmhouse_2.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+            text-align: center;
+        }
+        .envelope {
+            width: 150px;
+            height: 100px;
+            background-color: #d1739e;
+            border: 3px solid #a14b74;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+        .card {
+            background-color: #fff8dc;
+            border: 5px solid #d1739e;
+            border-radius: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .heart {
+            color: red;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <script>
+        function openCard() {
+            document.querySelector('.card').style.display = 'block';
+            document.querySelector('.envelope').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="envelope" onclick="openCard()">
+        <p style="color: white; font-size: 20px;">📩 摸摸打开</p>
+    </div>
+    <div class="card">
+        <h2>亲爱的宝❤️<span class="heart">❤️</span>:</h2>
+        <p>这是我们在一起的第一个情人节，我真的很开心能在UM的迎新周与你相识，没想到竟然是室友帮我牵的红线。</p>
+        <p>遇到你，我感觉我的好运都用完了吧——今年的猜拳和赌博都没赢过一次了。</p>
+        <p>从初识到相知，谢谢你从未因为我的脾气和小任性而远离。谢谢你在我一个人都不认识的大学里，一直陪伴在我身边，让我在陌生的环境中感到安心。</p>
+        <p>希望我们的故事，能一直温暖而长久地继续下去。</p>
+        <h3>情人节快乐！</h3>
+    </div>
+</body>
+</html>
